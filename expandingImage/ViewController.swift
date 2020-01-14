@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         switch sender.value{
         case 0:
             speed = 1.2
-            print(speed)
+            print (speed)
             break
         case 1:
             speed = 1.0
@@ -21,15 +21,19 @@ class ViewController: UIViewController {
             break
         case 2:
             speed = 0.8
+            print(speed)
             break
         case 3:
             speed = 0.6
+            print(speed)
                 break
         case 4:
             speed = 0.4
+            print(speed)
             
         default:
             speed = 0.1
+            print (speed)
         }
     }
     
