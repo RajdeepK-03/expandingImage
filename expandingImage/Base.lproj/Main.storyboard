@@ -21,7 +21,21 @@
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jl-a6-w85">
-                                <rect key="frame" x="182" y="834" width="76" height="21"/>
+                                <rect key="frame" x="62" y="834" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="tvw-eY-dgf">
+                                <rect key="frame" x="152" y="829" width="143" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="speedSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="9pk-E5-G3u"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhm-1Z-GcV">
+                                <rect key="frame" x="317" y="833" width="53" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -34,6 +48,8 @@
                     <connections>
                         <outlet property="lblCounter" destination="5Jl-a6-w85" id="9Qr-pn-xp7"/>
                         <outlet property="myView" destination="hdb-jA-VMN" id="SBx-o7-Ysa"/>
+                        <outlet property="slider" destination="tvw-eY-dgf" id="ghO-Tc-Hbo"/>
+                        <outlet property="sliderLabel" destination="Qhm-1Z-GcV" id="UUF-AV-oz0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

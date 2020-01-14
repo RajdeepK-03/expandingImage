@@ -8,12 +8,41 @@
 
 import UIKit
 class ViewController: UIViewController {
+    
+    @IBAction func speedSlider(_ sender: UISlider) {
+        switch sender.value{
+        case 0:
+            speed = 1.2
+            print(speed)
+            break
+        case 1:
+            speed = 1.0
+            print(speed)
+            break
+        case 2:
+            speed = 0.8
+            break
+        case 3:
+            speed = 0.6
+                break
+        case 4:
+            speed = 0.4
+            
+        default:
+            speed = 0.1
+        }
+    }
+    
+    
     @IBOutlet var myView: UIView!
     
     @IBOutlet weak var lblCounter: UILabel!
+    
+    @IBOutlet weak var sliderLabel: UILabel!
+    @IBOutlet weak var slider: UISlider!
     var timer: Timer!
     var counter = 0
-   
+    var speed = 0.1
   override func viewDidLoad() {
     super.viewDidLoad()
     let mainViewHeight = view.frame.size.height
@@ -32,10 +61,10 @@ class ViewController: UIViewController {
  
    
   func expand(){
-    var timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true)
+    var timer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true)
     { timer in
          // self.myView.backgroundColor = .random()
-               print("Expand by\(timer)")
+              
     self.myView.frame.origin.x -= 5
     self.myView.frame.origin.y -= 5
     self.myView.frame.size.height += 10
@@ -51,10 +80,10 @@ class ViewController: UIViewController {
   func shrink(){
 //    self.counter += 1
 //    self.lblCounter.text = "\(self.counter)"
-   var timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true)
+   var timer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true)
    { timer in
      //self.myView.backgroundColor = .random()
-           print("Expand by\(timer)")
+         
     self.myView.frame.origin.x += 5
     self.myView.frame.origin.y += 5
     self.myView.frame.size.height -= 10
